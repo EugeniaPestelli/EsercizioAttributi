@@ -8,20 +8,47 @@
 <title>Creare un form</title>
 </head>
 <body>
-    <form name="inserimento dati" action="mailto:eu.pest93@gmail.com" method="get">
- <p>Inserisci la tua età</p>
-<input type="number" name="age" min="0" max="100" step="2">
- <br>
-    <p>Scegli il tuo frutto preferito</p>
-       <input type="checkbox" name "mela" value="M" checked="cheked"/> Mela
-       <input type="checkbox" name "pera" value="P"/> Pera
-       <input type="checkbox" name "banana" value="B"/> Banana
-       <input type="checkbox" name "fragola" value="F"/> Fragola
-      <div>
+<h1>Inserisci i tuoi dati</h1>   
+ <form name="inserimento dati" action="mailto:eu.pest93@gmail.com" method="get" enctype="multipart/form-data">
+ <p>I campi obbligatori sono contrassegnati da <strong><abbr title="Richiesto">*</abbr></strong></p>
+        <fieldset>
+           <legend> Inserisci la tua età</legend>
+        
+ <label for="age">età
+    <strong><abbr title="Richiesto">*</abbr></strong>
+ </label>
+<input type="number" name="age" min="0" max="100" step="2" autofocus>
+ 
+</fieldset>
+
+ <fieldset>
+
+    <legend>Dati secondari</legend>
+    <span>Scegli il tuo sport preferito</span>
+    <div>
+        <label for="tennis"></label>
+       <input type="checkbox" name "Tennis" value="T" checked="cheked"/> Tennis
+    </div>
+    <div>
+        <label for="calcio"></label>
+       <input type="checkbox" name "Calcio" value="C"/> Calcio
+       </div>
+       <div>
+           <label for="basket"></label>
+       <input type="checkbox" name "Basket" value="B"/> Basket
+    </div>
+    <div>
+       <label for="Pallavvolo"></label>
+       <input type="checkbox" name "Pallavvolo" value="P"/> Pallavvolo</div>
+ </fieldset>
+
    <p>Quando sei disponibile per un incontro</p>
-       <input type="date" name="mydatetime">
-   </label>
-   <input type="reset" value="Resetta il form">
-   <input type="sumbit" value="Invia">
+       <input type="date" data-prop="custom" />
+   <input type="reset" value="Resetta il form" />
+   <input type="submit" value="Invia" />
+   <button disabled=”disabled” type=submit> ciao </button> </form>
+
+
+
 </div> </form>
 </body>
